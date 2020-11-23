@@ -12,6 +12,10 @@ int main(int argc, char **argv)
 	QFont font ("Comic Sans", 47, QFont::Thin, true);
 	button.setFont(font);
 	
+	QPushButton subButton;
+	subButton.setText("Click me too !");
+	subButton.setParent(&button);
+
 	button.show();
 
 	return app.exec();
