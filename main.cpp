@@ -4,19 +4,16 @@
 int main(int argc, char **argv)
 {
 	QApplication app(argc, argv);
+	QWidget window;
+	window.setFixedSize(200,100);
 	
 	QPushButton button;
 	
 	button.setText("Click me !!");
 	button.setToolTip("Believe it, you can click me");
-	QFont font ("Comic Sans", 47, QFont::Thin, true);
-	button.setFont(font);
-	
-	QPushButton subButton;
-	subButton.setText("Click me too !");
-	subButton.setParent(&button);
-
-	button.show();
+	button.setParent(&window);
+	button.setGeometry(10, 10, 80, 30);
+	window.show();
 
 	return app.exec();
 }
